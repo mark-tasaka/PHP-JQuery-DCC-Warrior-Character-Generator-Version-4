@@ -9,6 +9,11 @@ The two most notable differences between Version 3 and Version 4 of the DCC Warr
 
 ------------
 
+Update 1.01: 2023-02-22
+
+Updates to dccWarrior.php, classDetails.php, gear.php, weapons.php, hitPoints.js, languages.js, and warrior.css.
+
+
 Initial commit: 2023-02-20
 
 The initial commit for the DCC Warrior Character Generator Version 4.
