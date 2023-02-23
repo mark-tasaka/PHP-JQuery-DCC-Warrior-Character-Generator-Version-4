@@ -279,23 +279,32 @@
 
        $criticalDie = criticalDie($level);
 
-       $attackBonus = attackBonus($level);
-       $luckDie = luckDie($level);
+      // $attackBonus = attackBonus($level);
+       $deedDie = deedDie($level);
+       $threatRange = threatRange($level);
 
        $actionDice = actionDice($level);
 
        $title = title($level, $alignment);
+       
+       
+       if(isset($_POST["theLuckyWeapon"]))
+       {
+           $luckyWeaponNumberString = $_POST["theLuckyWeapon"];
+       } 
+
+       $luckyWeaponNumber = (int)$luckyWeaponNumberString;
+       $luckyWeapon = getWeapon($luckyWeaponNumber)[0];
+
 
         $weaponArray = array();
         $weaponNames = array();
         $weaponDamage = array();
     
-    
-
-    //For Random Select weapon
+    //For Random Select gear
     if(isset($_POST['thecheckBoxRandomWeaponsV3']) && $_POST['thecheckBoxRandomWeaponsV3'] == 1) 
     {
-        $weaponArray = getRandomWeapons($alignment);
+        $weaponArray = getRandomWeapons($luckyWeaponNumber);
 
     }
     else
@@ -552,18 +561,21 @@
         </span>
 
         
-        <span id="luckDie">
+        <span id="deedDie">
             <?php
-                echo $luckDie;
+                echo $deedDie;
             ?>
         </span>
 
         
-        <span id="attackBonus">
+        
+        <span id="threatRange">
             <?php
-                echo "+" . $attackBonus;
+                echo $threatRange;
             ?>
         </span>
+
+        
 
         <span id="initiative">
         </span>
@@ -585,6 +597,12 @@
 
         
 		<p id="birthAugur"><span id="luckySign"></span>: <span id="luckyRoll"></span> (<span id="LuckySignBonus"></span>)</p>
+        
+        <span id="luckyWeapon">
+            <?php
+                echo $luckyWeapon;
+            ?>
+        </span>
 
         
         <span id="melee"></span>
@@ -712,14 +730,14 @@
             "addLanguages": "Common" + bonusLanguages,
             "armourClass": <?php echo $totalAcDefense ?> + baseAC,
             "hp": getHitPoints (level, staminaMod) + hitPointAdjustPerLevel(birthAugur,  luckMod),
-			"melee": <?php echo $attackBonus ?> + strengthMod + meleeAdjust(birthAugur, luckMod),
-			"range": <?php echo $attackBonus ?> + agilityMod + rangeAdjust(birthAugur, luckMod),
+			"melee": strengthMod + meleeAdjust(birthAugur, luckMod),
+			"range": agilityMod + rangeAdjust(birthAugur, luckMod),
 			"meleeDamage": strengthMod + meleeDamageAdjust(birthAugur, luckMod),
 			"rangeDamage": rangeDamageAdjust(birthAugur, luckMod),
             "reflex": <?php echo $reflexBase ?> + agilityMod + adjustRef(birthAugur, luckMod),
             "fort": <?php echo $fortBase ?> + staminaMod + adjustFort(birthAugur,luckMod),
             "will": <?php echo $willBase ?> + personalityMod + adjustWill(birthAugur, luckMod),
-            "initiative": agilityMod + adjustInit(birthAugur, luckMod)
+            "initiative": <?php echo $level ?> + agilityMod + adjustInit(birthAugur, luckMod)
 
 		};
 	    if(warriorCharacter.hitPoints <= 0 ){

@@ -1,23 +1,22 @@
 /*HitPoints randomly generate hit points
-Thief*/
-
+Warrior*/
 function getHitPoints (level, staminaMod)
 {
-    var hitPoints = Math.floor((Math.random() * 4) + 1) + staminaMod;
+    let hitPoints = Math.floor((Math.random() * 4) + 1) + staminaMod;
     
-    var hitDice = level;
+    let hitDice = level;
     
-    var counter = 0;
+    let counter = 0;
             
     for(;counter < hitDice; counter++)
             {
 
-                var hpEachLevel = 0;
-                hpEachLevel = Math.floor((Math.random() * 6) + 1) + staminaMod;
+                let hpEachLevel = 0;
+                hpEachLevel = Math.floor((Math.random() * 12) + 1) + staminaMod;
 
-                if(hpEachLevel < 3)
+                if(hpEachLevel < 5)
                     {
-                        hpEachLevel = 3;
+                        hpEachLevel = 5;
                     }
 
                 hitPoints += hpEachLevel;
@@ -27,3 +26,4 @@ function getHitPoints (level, staminaMod)
     return hitPoints;
     
 }
+

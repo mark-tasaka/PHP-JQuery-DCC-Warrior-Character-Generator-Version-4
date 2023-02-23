@@ -7,26 +7,21 @@ function addBonusLanguages() {
 		{"language": "Dwarf"},
 		{"language": "Elf"},
 		{"language": "Halfling"},
-		{"language": "Gnome"},
+		{"language": "Harpy"},
 		{"language": "Bugbear"},
 		{"language": "Goblin"},
 		{"language": "Gnoll"},
-		{"language": "Hobgoblin"},
+		{"language": "Hobgolin"},
 		{"language": "Kobold"},
 		{"language": "Lizardman"},
+		{"language": "Minotaur"},
+		{"language": "Serpent-man"},
 		{"language": "Ogre"},
 		{"language": "Orc"},
-		{"language": "Serpent-man"},
-		{"language": "Doppelganger"},
-		{"language": "Dragon"},
-		{"language": "Troglodyte"},		
-		{"language": "Angelic"},		
-		{"language": "Centaur"},		
-		{"language": "Demonic"},
-		{"language": "Giant"},
-		{"language": "Pixie"}
+		{"language": "Troglodyte"},
+		{"language": "Giant"}
 			];
-    return bonusLanguages[Math.floor(Math.random() * bonusLanguages.length)]; 
+    return bonusLanguages[Math.floor(Math.random() * 17)]; 
 }
 		
 	  
