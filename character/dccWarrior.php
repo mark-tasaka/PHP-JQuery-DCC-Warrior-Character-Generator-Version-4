@@ -203,14 +203,14 @@
         {
             rsort($abilityScoreArray);
 
-            $strength = $abilityScoreArray[3];
-            $agility = $abilityScoreArray[5];
-            $stamina = $abilityScoreArray[4];
-            $personality = $abilityScoreArray[0];
-            $intelligence = $abilityScoreArray[1];
-            $luck = $abilityScoreArray[2];
+            $strength = $abilityScoreArray[0];
+            $agility = $abilityScoreArray[2];
+            $stamina = $abilityScoreArray[1];
+            $personality = $abilityScoreArray[4];
+            $intelligence = $abilityScoreArray[5];
+            $luck = $abilityScoreArray[3];
 
-            $optimizeAbilityScoreMessage = "<br/>Ability Scores optimized in the order of Per, Int, Luck, Str, Sta, Agi.";
+            $optimizeAbilityScoreMessage = "<br/>Ability Scores optimized in the order of Str, Sta, Agi, Luck, Per, Int.";
         }
         else
         {
