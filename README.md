@@ -15,6 +15,12 @@ https://www.oldschooladventures.org/dcc2/more/classes/warrior/
 
 ----------
 
+
+Update 1.03: 2023-02-24
+
+Replaced the Warrior Character Sheet with an updated character sheet.
+
+
 Update 1.02: 2023-02-23
 
 Implemented minor adjustments to the program. As well, added a link to a live version of the DCC Warrior Character Generator Version 4 to the ReamMe file.
