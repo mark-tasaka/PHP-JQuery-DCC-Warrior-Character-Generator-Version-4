@@ -9,6 +9,17 @@ The two most notable differences between Version 3 and Version 4 of the DCC Warr
 
 ------------
 
+Dungeon Crawl Classics Warrior Character Generator Version 4:
+
+https://www.oldschooladventures.org/dcc2/more/classes/warrior/
+
+----------
+
+Update 1.02: 2023-02-23
+
+Implemented minor adjustments to the program. As well, added a link to a live version of the DCC Warrior Character Generator Version 4 to the ReamMe file.
+
+
 Update 1.01: 2023-02-22
 
 Updates to dccWarrior.php, classDetails.php, gear.php, weapons.php, hitPoints.js, languages.js, and warrior.css.
